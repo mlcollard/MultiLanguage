@@ -1,12 +1,16 @@
+# @file CMakeLists.txt
+#
+# CMake files for the srcfacts project
+
 cmake_minimum_required(VERSION 3.31)
 
-project(MultiLanguage LANGUAGES C CXX)
+project(MultiLanguage LANGUAGES CXX)
 
-# Add an executable target using your single source file.
+# multilanguage
 add_executable(MultiLanguage MultiLanguage.cpp)
 target_compile_features(MultiLanguage PUBLIC cxx_std_17)
 
-# run the executable.
+# run the executable
 add_custom_target(run
     COMMAND $<TARGET_FILE:MultiLanguage>
     DEPENDS MultiLanguage
